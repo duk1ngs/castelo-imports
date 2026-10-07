@@ -19,3 +19,15 @@
 /* Preserve the complete portrait story, including its printed caption. */
 .store-contact-photo>img{max-height:760px;object-fit:contain;background:#070a28}
 @media(max-width:650px){.store-contact-photo>img{max-height:none;object-fit:contain}}
+
+/* Container Scroll interpretation: castelo-imports. Existing effects retained. */
+
+.architecture-scene{perspective:1100px}.architecture-panel{position:relative;padding:14px;border:1px solid #72502d;background:#111532;transform-origin:center 75%;box-shadow:8px 8px 0 #bdb9b0}
+.architecture-panel:before,.architecture-panel:after{content:'';position:absolute;width:28px;height:28px;border-color:#72502d;border-style:solid;pointer-events:none}.architecture-panel:before{left:-7px;top:-7px;border-width:1px 0 0 1px}.architecture-panel:after{right:-7px;bottom:-7px;border-width:0 1px 1px 0}
+.architecture-panel img{border:1px solid #d2b28d55}.architecture-panel{max-width:370px}
+@media(max-width:650px){.architecture-panel{padding:10px;box-shadow:5px 5px 0 #bdb9b0}.architecture-scene{perspective:1600px}}
+
+.polished-cta{position:relative;isolation:isolate;overflow:hidden}.polished-cta:before{content:'';position:absolute;inset:-40% -20%;background:linear-gradient(110deg,transparent 40%,#fff2 50%,transparent 60%);transform:translateX(-110%);pointer-events:none}
+@media(hover:hover) and (pointer:fine){.polished-cta:hover:before,.polished-cta:focus-visible:before{animation:cta-light-pass .65s ease-out}}
+@keyframes cta-light-pass{to{transform:translateX(110%)}}
+@media(prefers-reduced-motion:reduce){[data-container-panel]{transform:none!important}.polished-cta:before{display:none}}
